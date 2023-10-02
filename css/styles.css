@@ -13,6 +13,7 @@
     --main-blue: #2196F3;
     --background-wheat: #F5F4FA;
     --bottom-border-header: #ececec;
+    --logo-color: #AFB1B8;
 }
 
 body {
@@ -187,7 +188,19 @@ main {
     align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;
-    margin-left: 385px;
+    margin-left: 330px;
+}
+
+.contact-info-container .icon {
+    cursor: pointer;
+    margin-right: 10px;
+    fill: var(--main-grey);
+}
+.contact-info-container .icon:hover {
+    fill: var(--main-blue);
+}
+.contact-info-container .icon:focus {
+    fill: var(--main-blue);
 }
 
 .contact-info {
@@ -201,7 +214,6 @@ main {
 }
 
 
-
 .contact-info:hover {
     color: var(--main-blue);
 }
@@ -210,10 +222,49 @@ main {
     counter-reset: var(--main-blue);
 }
 
+/* FIRST SECTION*/
+
 .first-section {
     display: flex;
-    background-color: var(--background-grey);
+    background-image: url(https://lh3.googleusercontent.com/pw/ADCreHf-BnRPKdP4ZAukIHR-dye78KLJrJCSODhI_q3HQ1TlATKtTl8p-hjH6CAwBOySvQXovrsWD8KO4aLLL_fs0DYXgBZ1brlkj5zTW7lLd7U4ufnehR0=w2400);
     width: auto;
+    height: auto;
+    background-color:rgba(47, 48, 58, 0.40);
+    position: relative;
+    background-position: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to right, #2F303A66 90%);
+
+}
+
+
+
+.first-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.40), transparent);
+    z-index: 1;
+}
+
+.first-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 1200px;
+    height: 100%;
+    background-image: url(https://lh3.googleusercontent.com/pw/ADCreHf-BnRPKdP4ZAukIHR-dye78KLJrJCSODhI_q3HQ1TlATKtTl8p-hjH6CAwBOySvQXovrsWD8KO4aLLL_fs0DYXgBZ1brlkj5zTW7lLd7U4ufnehR0=w2400);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+   
+
 }
 
 .container-first-section {
@@ -225,6 +276,7 @@ main {
     flex-direction: column;
     padding: 200px 0;
     margin: 0 auto;
+    
 }
 
 
@@ -238,7 +290,7 @@ main {
     letter-spacing: 2.64px;
     text-transform: uppercase;
     width: 696px;
-
+    z-index: 2;
 
 }
 
@@ -252,9 +304,10 @@ main {
     width: 200px;
     height: 50px;
     flex-shrink: 0;
+    border: none;
     border-radius: 4px;
-    box-shadow: 0px 4px 4px 0px;
     margin-top: 30px;
+    z-index: 2;
 }
 
 .first-section-button:hover {
@@ -268,6 +321,8 @@ main {
     color: white;
     box-shadow: 0px 4px 4px 0px #00000026;
 }
+
+/* TEXT SECTION*/
 
 .text-section {
     background-color: white;
@@ -289,7 +344,14 @@ main {
 .container-text-section li {
     flex-basis: calc((100% - 90px) / 4);
 }
-
+.container-text-section .rectangle-text {
+    margin-bottom: 30px;
+    fill: var(--background-wheat);
+    
+}
+.rectangle-text .icon {
+    object-fit: 50%;
+}
 .subtitle {
     color: var(--main-black);
     font-size: 14px;
@@ -395,9 +457,7 @@ main {
     max-width: 270px;
 }
 
-.inferior-card{
-    padding: 30px;
-}
+
 .our-team-name {
     text-align: center;
     font-size: 16px;
@@ -416,9 +476,100 @@ main {
     letter-spacing: 0.48px;
     color: var(--main-grey);
     padding-top: 30px;
-    padding-bottom: 30px;
+    
 }
- 
+.container-icons-inferior-card{
+    display: flex;
+    margin-top: 16px;
+}   
+.elipse-group ellipse {
+     fill: white;
+     width: 44px;
+     height: 44px
+}
+.elipse-group ellipse:hover {
+   fill: var(--main-blue);
+   cursor: pointer;
+}
+.elipse-group:hover .icon {
+    fill: #fff;
+}
+.elipse-group ellipse:focus {
+    fill: var(--main-blue);
+ }
+ .elipse-group:focus .icon {
+     fill: #fff;
+ }
+
+.container-icons-inferior-card .icon{
+    fill: #afb1b8;
+}
+    
+
+/* REGULAR CUSTOMERS*/
+.regular-customers {
+    max-width: 1200px;
+    width: 100vw;
+    margin: 0 auto;
+    margin-right: auto;
+    
+}
+.container-regular-customers {
+    display: flex;
+    max-width: 1200px;
+    width: 100vw;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 94px 0px 94px 0px;
+    align-items: center;
+}
+
+.regular-customers-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: 1.08px;
+    color: var(--main-black);
+    margin-bottom: 50px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.container-icons-regular-customers {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+
+.container-icons-regular-customers  .icon {
+    fill: var(--logo-color);
+      
+}
+
+.rectangle {
+    stroke: var(--logo-color);
+     stroke-width: 1; 
+     fill: transparent;
+     border-radius: 4px;
+     border: 1px;
+}
+
+.container:hover .rectangle {
+    stroke: var(--main-blue); 
+    fill: transparent;
+  }
+  
+  .container:hover .icon  {
+    fill: var(--main-blue); 
+  }
+
 /* FOOTER */
 
 .global-footer {
@@ -434,8 +585,10 @@ main {
     margin: 0 auto;
     padding: 60px 0px 60px 0;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: baseline;
+    overflow: hidden;
 }
 
 .logo-footer {
@@ -494,6 +647,41 @@ main {
     counter-reset: var(--main-blue);
 }
 
+
+.footer-icons {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 94px;
+    width: 206px;
+    
+}
+
+.icons-title {
+font-family: inherit;
+font-size: 14px;
+font-weight: 700;
+line-height: 16px;
+letter-spacing: 0.03em;
+text-align: left;
+text-transform: uppercase;
+color: #FFF;
+
+}
+.container-footer-icons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.container-footer-icons ellipse:hover {
+      fill: var(--main-blue);
+      cursor: pointer;
+}
+.container-footer-icons ellipse:focus {
+    fill: var(--main-blue);
+}
 /* PORTOFOLIO*/
 
 /*BUTTONS*/
@@ -523,6 +711,10 @@ main {
     display: block;
     padding: 10px;
     padding: 6px 22px 6px 22px;
+    border-radius: 4px;
+}
+.filter-buttons .regular-button:hover {
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.3);
 }
 
 .current-button {
@@ -576,7 +768,10 @@ main {
     flex-basis: calc((100% - 90px) / 3);
     max-width: 370px;
 }
-
+.results-items li:hover {
+    cursor: pointer;
+    box-shadow: 10px 10px 8px 2px rgba(0, 0, 0, 0.3);
+}
 .results-down-card {
     display: flex;
     flex-direction: column;
